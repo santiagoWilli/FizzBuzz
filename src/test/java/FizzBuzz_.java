@@ -20,17 +20,14 @@ public class FizzBuzz_ {
     }
 
     @Test
-    public void five_should_return_Buzz() {
+    public void a_number_divisible_by_5_should_return_Buzz() {
         assertThat(fizzBuzz.of(5)).isEqualTo("Buzz");
-    }
-
-    @Test
-    public void ten_should_return_Buzz() {
         assertThat(fizzBuzz.of(10)).isEqualTo("Buzz");
+        assertThat(fizzBuzz.of(20)).isEqualTo("Buzz");
     }
 
     @Test
-    public void twenty_should_return_Buzz() {
-        assertThat(fizzBuzz.of(20)).isEqualTo("Buzz");
+    public void fifteen_should_return_FizzBuzz() {
+        assertThat(fizzBuzz.of(15)).isEqualTo("Fizz Buzz");
     }
 }
