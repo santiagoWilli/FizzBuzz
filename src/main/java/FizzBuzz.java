@@ -1,9 +1,18 @@
 public class FizzBuzz {
 
     String of(int number) {
-        if (number == 15) return "Fizz Buzz";
+        if ((! isDivisibleByThree(number) && ! isDibisibleByFive(number))) return String.valueOf(number);
+        return fizzOf(number) + buzzOf(number);
+    }
+
+    private String fizzOf(int number) {
         if (isDivisibleByThree(number)) return "Fizz";
-        return (isDibisibleByFive(number) ? "Buzz" : String.valueOf(number));
+        return "";
+    }
+
+    private String buzzOf(int number) {
+        if (isDibisibleByFive(number)) return "Buzz";
+        return "";
     }
 
     private boolean isDivisibleByThree(int number) {

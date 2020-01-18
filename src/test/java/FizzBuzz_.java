@@ -27,7 +27,8 @@ public class FizzBuzz_ {
     }
 
     @Test
-    public void fifteen_should_return_FizzBuzz() {
-        assertThat(fizzBuzz.of(15)).isEqualTo("Fizz Buzz");
+    public void a_number_divisible_by_3_and_5_should_return_FizzBuzz() {
+        assertThat(fizzBuzz.of(15)).isEqualTo("FizzBuzz");
+        assertThat(fizzBuzz.of(30)).isEqualTo("FizzBuzz");
     }
 }
