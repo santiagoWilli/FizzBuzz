@@ -18,8 +18,13 @@ public class FizzBuzz_ {
         assertThat(of(3)).isEqualTo("Fizz");
     }
 
+    @Test
+    public void four_should_return_4() {
+        assertThat(of(4)).isEqualTo("4");
+    }
+
     private String of(int i) {
-        if (i == 3) return "Fizz";
-        return (i == 1 ? "1" : "2");
+        if (i != 3) return String.valueOf(i);
+        return "Fizz";
     }
 }
