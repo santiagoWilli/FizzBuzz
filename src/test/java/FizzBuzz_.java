@@ -30,8 +30,17 @@ public class FizzBuzz_ {
         assertThat(of(9)).isEqualTo("Fizz");
     }
 
+    @Test
+    public void ten_should_return_Buzz() {
+        assertThat(of(10)).isEqualTo("Buzz");
+    }
+
     private String of(int i) {
-        if (i == 3 || i == 6 || i == 9) return "Fizz";
-        return (i == 5 ? "Buzz" : String.valueOf(i));
+        if (isDivisibleByThree(i)) return "Fizz";
+        return (i == 5 || i == 10 ? "Buzz" : String.valueOf(i));
+    }
+
+    private boolean isDivisibleByThree(int i) {
+        return i % 3 == 0;
     }
 }
