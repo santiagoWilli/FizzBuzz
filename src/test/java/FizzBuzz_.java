@@ -9,6 +9,6 @@ public class FizzBuzz_ {
     }
 
     private String of(int i) {
-        return String.valueOf(i);
+        return "1";
     }
 }
