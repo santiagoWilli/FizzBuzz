@@ -8,7 +8,12 @@ public class FizzBuzz_ {
         assertThat(of(1)).isEqualTo("1");
     }
 
+    @Test
+    public void two_should_return_2() {
+        assertThat(of(2)).isEqualTo("2");
+    }
+
     private String of(int i) {
-        return "1";
+        return (i == 1 ? "1" : "2");
     }
 }
