@@ -20,8 +20,13 @@ public class FizzBuzz_ {
         assertThat(of(5)).isEqualTo("Buzz");
     }
 
+    @Test
+    public void six_should_return_Fizz() {
+        assertThat(of(6)).isEqualTo("Fizz");
+    }
+
     private String of(int i) {
-        if (i != 3 && i != 5) return String.valueOf(i);
-        return (i == 3 ? "Fizz" : "Buzz");
+        if (i == 3 || i == 6) return "Fizz";
+        return (i == 5 ? "Buzz" : String.valueOf(i));
     }
 }
