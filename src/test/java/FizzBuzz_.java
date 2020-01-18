@@ -13,7 +13,13 @@ public class FizzBuzz_ {
         assertThat(of(2)).isEqualTo("2");
     }
 
+    @Test
+    public void three_should_return_Fizz() {
+        assertThat(of(3)).isEqualTo("Fizz");
+    }
+
     private String of(int i) {
+        if (i == 3) return "Fizz";
         return (i == 1 ? "1" : "2");
     }
 }
